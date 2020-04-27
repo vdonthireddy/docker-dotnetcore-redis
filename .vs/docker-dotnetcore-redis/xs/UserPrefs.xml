@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{57678D81-F198-44FA-83F8-4DB0E7DCA3D7}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Startup.cs" Line="28" Column="39" />
+      <File FileName="Startup.cs" Line="31" Column="84" />
       <File FileName="Controllers/WeatherForecastController.cs" Line="28" Column="1" />
       <File FileName="Controllers/EmployeeController.cs" Line="26" Column="1" />
       <File FileName="docker-compose.yml" Line="5" Column="39" />
       <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="README.md" Line="4" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +14,7 @@
           <Node name="docker-dotnetcore-redis" expanded="True">
             <Node name="docker-dotnetcore-redis" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="appsettings.json" selected="True" />
+              <Node name="README.md" selected="True" />
             </Node>
           </Node>
         </State>
