@@ -1,0 +1,20 @@
+version: '3.3'
+
+services:  
+  web:
+    image: docker-dotnetcore-redis:latest
+    depends_on:
+      - "redis_image"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8435:8435"
+    links:
+      - "redis_image"
+
+  redis_image:
+    image: redis
+    container_name: cache
+    ports:
+      - "6379:6379"

@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/donmac/code/docker/docker-dotnetcore-redis/docker-dotnetcore-redis.csproj": {}
+  },
+  "projects": {
+    "/Users/donmac/code/docker/docker-dotnetcore-redis/docker-dotnetcore-redis.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/donmac/code/docker/docker-dotnetcore-redis/docker-dotnetcore-redis.csproj",
+        "projectName": "docker-dotnetcore-redis",
+        "projectPath": "/Users/donmac/code/docker/docker-dotnetcore-redis/docker-dotnetcore-redis.csproj",
+        "packagesPath": "/Users/donmac/.nuget/packages/",
+        "outputPath": "/Users/donmac/code/docker/docker-dotnetcore-redis/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/donmac/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Caching.Redis": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
