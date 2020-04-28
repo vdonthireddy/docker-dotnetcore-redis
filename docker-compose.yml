@@ -2,7 +2,7 @@ version: '3.3'
 
 services:  
   web:
-    image: docker-dotnetcore-redis:1.0
+    image: docker-dotnetcore-redis
     depends_on:
       - "redis_image"
     build:

@@ -1,12 +1,11 @@
 ﻿<Properties StartupConfiguration="{57678D81-F198-44FA-83F8-4DB0E7DCA3D7}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="allrun.sh">
     <Files>
-      <File FileName="Startup.cs" Line="31" Column="84" />
-      <File FileName="Controllers/WeatherForecastController.cs" Line="28" Column="1" />
-      <File FileName="Controllers/EmployeeController.cs" Line="26" Column="1" />
-      <File FileName="docker-compose.yml" Line="5" Column="39" />
-      <File FileName="appsettings.json" Line="1" Column="1" />
-      <File FileName="README.md" Line="4" Column="1" />
+      <File FileName="Startup.cs" Line="27" Column="75" />
+      <File FileName="Controllers/EmployeeController.cs" Line="11" Column="49" />
+      <File FileName="docker-compose.yml" Line="14" Column="21" />
+      <File FileName="README.md" Line="6" Column="1" />
+      <File FileName="allrun.sh" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,9 +13,15 @@
           <Node name="docker-dotnetcore-redis" expanded="True">
             <Node name="docker-dotnetcore-redis" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="README.md" selected="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="allrun.sh" selected="True" />
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>_config["ConnectionStrings.redis]</Value>
         </State>
       </Pad>
     </Pads>
@@ -24,9 +29,7 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/donmac/code/docker/docker-dotnetcore-redis/Controllers/EmployeeController.cs" relfile="Controllers/EmployeeController.cs" line="22" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.docker-dotnetcore-redis PreferredExecutionTarget="/Applications/Google Chrome.app" />

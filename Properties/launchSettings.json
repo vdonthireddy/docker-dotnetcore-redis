@@ -20,7 +20,7 @@
     "docker_dotnetcore_redis": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "api/employee?name=Reddy",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

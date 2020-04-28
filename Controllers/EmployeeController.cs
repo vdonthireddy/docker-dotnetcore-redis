@@ -1,41 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Configuration;
 
 namespace docker_dotnetcore_redis.Controllers
 {
     [Route("api/[controller]")]
     public class EmployeeController : Controller
     {
-        private readonly IMemoryCache _memoryCache;
-        public EmployeeController(IMemoryCache memoryCache)
+        private readonly IConfiguration _config;
+        private readonly IDistributedCache cache;
+
+        public EmployeeController(IConfiguration config, IDistributedCache distributedCache)
         {
-            _memoryCache = memoryCache;
+            _config = config;
+            cache = distributedCache;
         }
 
         [HttpGet]
-        public IEnumerable<string> Get()
+        public string Get(string name = null)
         {
-            string cacheKey = "EmployeeCacheData";
-            IEnumerable<string> data = null;
-
-            if (!_memoryCache.TryGetValue(cacheKey, out string cachedData))
-            {
-                var cacheExpirationOptions = new MemoryCacheEntryOptions()
-                {
-                    AbsoluteExpiration = DateTime.Now.AddMinutes(1),
-                    Priority = CacheItemPriority.Normal
-                };
-                data = new string[] { "cache", "value1", "value2" };
-                _memoryCache.Set(cacheKey, data, cacheExpirationOptions);
-            } else
-            {
-                return _memoryCache.Get(cacheKey) as IEnumerable<string>;
-            }
-            return new string[] { "value1", "value2" };
+            if (string.IsNullOrEmpty(name))
+                name = "Reddy 123 " + DateTime.Now.ToString("HH:mm:sss");
+            cache.SetString("Name", name);
+            var data = cache.GetString("Name");
+            return data;
         }
 
     }
