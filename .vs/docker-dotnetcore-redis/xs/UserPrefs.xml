@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{57678D81-F198-44FA-83F8-4DB0E7DCA3D7}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="allrun.sh">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Dockerfile">
     <Files>
-      <File FileName="Startup.cs" Line="27" Column="75" />
-      <File FileName="Controllers/EmployeeController.cs" Line="11" Column="49" />
-      <File FileName="docker-compose.yml" Line="14" Column="21" />
-      <File FileName="README.md" Line="6" Column="1" />
-      <File FileName="allrun.sh" Line="1" Column="1" />
+      <File FileName="Controllers/EmployeeController.cs" Line="29" Column="68" />
+      <File FileName="docker-compose.yml" />
+      <File FileName="README.md" />
+      <File FileName=".gitignore" Line="3" Column="1" />
+      <File FileName="Dockerfile" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,14 +14,9 @@
             <Node name="docker-dotnetcore-redis" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Properties" expanded="True" />
-              <Node name="allrun.sh" selected="True" />
+              <Node name="Dockerfile" selected="True" />
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>_config["ConnectionStrings.redis]</Value>
         </State>
       </Pad>
     </Pads>

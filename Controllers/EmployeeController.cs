@@ -10,6 +10,7 @@ namespace docker_dotnetcore_redis.Controllers
     {
         private readonly IConfiguration _config;
         private readonly IDistributedCache cache;
+        private readonly string cacheKey = "vjName";
 
         public EmployeeController(IConfiguration config, IDistributedCache distributedCache)
         {
@@ -18,14 +19,21 @@ namespace docker_dotnetcore_redis.Controllers
         }
 
         [HttpGet]
-        public string Get(string name = null)
+        public string Get()
         {
-            if (string.IsNullOrEmpty(name))
-                name = "Reddy 123 " + DateTime.Now.ToString("HH:mm:sss");
-            cache.SetString("Name", name);
-            var data = cache.GetString("Name");
-            return data;
+            var data = string.Empty;
+            if ((data = cache.GetString(cacheKey)) == null)
+            {
+                data = DateTime.Now.ToString("HH:mm:sss");
+                cache.SetString(cacheKey, data, new DistributedCacheEntryOptions {
+                    AbsoluteExpiration = DateTime.Now.AddMinutes(1)
+                });
+                return "Not Cached: " + data;
+            } else
+            {
+                data = cache.GetString(cacheKey);
+                return "Cached: " + data;
+            }
         }
-
     }
 }
