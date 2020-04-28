@@ -3,10 +3,9 @@ docker rm $(docker ps -a -q)
 docker rmi -f docker-dotnetcore-redis
 docker build -t docker-dotnetcore-redis .
 docker-compose up -d
-echo '5...'
-sleep 1
-echo '4...'
-sleep 1
+docker tag docker-dotnetcore-redis vdonthireddy/docker-dotnetcore-redis:1.0
+docker push vdonthireddy/docker-dotnetcore-redis:1.0
+docker rmi -f $(docker images -f "dangling=true" -q)
 echo '3...'
 sleep 1
 echo '2...'
